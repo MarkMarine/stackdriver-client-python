@@ -206,7 +206,7 @@ class AnonStackObject(AnonStackInterface, dict):
             raise TypeError('Object must be a dictionary')
 
         # copy all items in dict
-        for key, value in data.iteritems():
+        for key, value in data[0].iteritems():
             self[key] = value
 
         super(AnonStackObject, self).__init__(rest_class, client)
@@ -238,7 +238,7 @@ class AnonStackObject(AnonStackInterface, dict):
         data = self._unwind_result(resp)
 
         # merge response in
-        for key, value in data.iteritems():
+        for key, value in data[0].iteritems():
             self[key] = value
 
         return self
@@ -254,7 +254,7 @@ class AnonStackObject(AnonStackInterface, dict):
         data = self._unwind_result(resp)
 
         # merge response in
-        for key, value in data.iteritems():
+        for key, value in data[0].iteritems():
             self[key] = value
 
         return self
@@ -298,7 +298,7 @@ class AnonStackObject(AnonStackInterface, dict):
         data = self._unwind_result(resp)
 
         # merge response in
-        for key, value in data.iteritems():
+        for key, value in data[0].iteritems():
             self[key] = value
 
         return self
