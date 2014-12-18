@@ -206,7 +206,7 @@ class AnonStackObject(AnonStackInterface, dict):
             raise TypeError('Object must be a dictionary')
 
         # copy all items in dict
-        for key, value in data[0].iteritems():
+        for key, value in data.iteritems():
             self[key] = value
 
         super(AnonStackObject, self).__init__(rest_class, client)
