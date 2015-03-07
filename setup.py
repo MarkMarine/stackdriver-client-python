@@ -20,7 +20,7 @@ with open('LICENSE') as f:
 
 setup(
     name='stackdriver',
-    version='0.2',
+    version='0.2.1',
     description='Stackdriver Client APIs for Python',
     long_description=readme + '\n\n', # TODO: add a history file
     author='John (J5) Palmieri',
